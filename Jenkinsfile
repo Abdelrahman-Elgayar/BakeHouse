@@ -4,23 +4,13 @@ pipeline {
     stages {
         stage('test') {
             steps {
-                echo 'test'
-                sh "ls"
-                sh "docker ps"
+                echo 'This is test stage'
             }
         }
-        stage('build') {
+        
+        stage('Jenkins') {
             steps {
-                echo 'build'
-                sh """
-                    ls
-                    echo ${build_number}
-                """
-            }
-        }
-        stage('deploy') {
-            steps {
-                echo 'deploy'
+                echo 'This pipeline is triggered through Jenkins file by Abdelrahman'
             }
         }
     }
